@@ -78,7 +78,6 @@ console.log(globalVar);
 
 const a = 'b';
 a = 'a';
-
 // 
 
 
@@ -92,3 +91,83 @@ obj = { name: name, age: age };
 //after es5
 obj2 = { name, age};
 console.log(obj2);
+
+//Arrow functions 
+
+const name = [
+    {name: 'Andres', age: 25},
+    {name: 'Yesica', age: 27}
+]
+
+let  listOfNames = names.map(function (item) {
+    console.log(tiem.name);
+})
+
+//es6
+
+let listOfNames2 = names.map (item => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => { 
+    // ...
+}
+
+const listOfNames4 =name => {
+    // ...
+}
+
+const square = num => num * num;
+
+//Promises
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => { 
+        if (false) { 
+            resolve('Hey!');
+        } else {
+            reject('Ups!!');
+        }
+    });
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
+
+    // Clases, Módulos y Generadores
+    class calculator {
+        constructor(){
+            this.valueA = 0;
+            this.valueB = 0;
+        }
+        sum(valueA, valueB) {
+            this.valueA = valueA;
+            this.valueB = valueB;
+            return this.valueA + this.valueB;
+        }
+    }
+    
+    const calc = new calculator ();
+    console.log(calc.sum(2,2));
+
+    import { hello } from './module';
+
+    hello();
+
+    function* helloWorld () {
+        if (true) {
+            yield 'Hello, ';
+        }
+        if (true) {
+            yield 'World';
+        }
+    };
+
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+
+
+
+     
