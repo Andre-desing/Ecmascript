@@ -1,4 +1,4 @@
-//Se incluypo includes y potencias
+//Se incluypo includes y exponentes
 
 let numbers = [1,2,3,7,8];
 
