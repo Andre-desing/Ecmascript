@@ -78,4 +78,17 @@ console.log(globalVar);
 
 const a = 'b';
 a = 'a';
- 
+
+// 
+
+
+let name = 'Andres';
+let age = 25; 
+
+//before es5
+
+obj = { name: name, age: age };
+
+//after es5
+obj2 = { name, age};
+console.log(obj2);
